@@ -26,6 +26,21 @@ const cases = [
     expected: []
   },
   {
+    name: 'directly use the new value',
+    patches: [{ op: 'add', path: '/a', value: 42 }, { op: 'replace', path: '/a', value: 43 }],
+    expected: [{ op: 'add', path: '/a', value: 43 }]
+  },
+  {
+    name: 'copy new value',
+    patches: [
+      { op: 'add', path: '/a', value: 42 },
+      { op: 'replace', path: '/a', value: 43 },
+      { op: 'copy', from: '/a', path: '/b' },
+      { op: 'remove', path: '/a' }
+    ],
+    expected: [{ op: 'add', path: '/b', value: 43 }]
+  },
+  {
     name: 'add element to end',
     doc: { foo: ['bar', 'baz'] },
     patches: [{ op: 'add', path: '/foo/-', value: 'qux' }],
