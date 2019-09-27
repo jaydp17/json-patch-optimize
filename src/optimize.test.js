@@ -41,6 +41,12 @@ const cases = [
     expected: [{ op: 'add', path: '/b', value: 43 }]
   },
   {
+    name: 'replace an object',
+    doc: { foo: { abc: { def: 34 } } },
+    patches: [{ op: 'replace', path: '/foo/abc', value: { xyz: 64 } }],
+    expected: [{ op: 'replace', path: '/foo/abc', value: { xyz: 64 } }]
+  },
+  {
     name: 'add element to end',
     doc: { foo: ['bar', 'baz'] },
     patches: [{ op: 'add', path: '/foo/-', value: 'qux' }],

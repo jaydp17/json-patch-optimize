@@ -15,7 +15,9 @@ const jsonPatch = require('json8-patch');
 function optimize(doc, patches) {
   const copyDoc = JSON.parse(JSON.stringify(doc));
   const { doc: outputDoc } = jsonPatch.apply(copyDoc, patches);
-  return jsonPatch.diff(doc, outputDoc);
+  const newPatches = jsonPatch.diff(doc, outputDoc);
+  if (newPatches.length >= patches.length) return patches;
+  return newPatches;
 }
 
 module.exports = optimize;
