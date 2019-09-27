@@ -1,0 +1,22 @@
+{
+  "name": "json-patch-optimize",
+  "version": "0.1.0",
+  "author": "Jaydeep Solanki <jaydp17@gmail.com> (https://jaydp.com)",
+  "bugs": {
+    "url": "https://github.com/jaydp17/json-patch-optimize/issues"
+  },
+  "homepage": "https://github.com/jaydp17/json-patch-optimize#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaydp17/json-patch-optimize.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "json8-patch": "^0.4.2"
+  }
+}
