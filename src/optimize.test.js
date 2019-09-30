@@ -45,13 +45,23 @@ const cases = [
     doc: { foo: { abc: { def: 34 } } },
     patches: [{ op: 'replace', path: '/foo/abc', value: { xyz: 64 } }],
     expected: [{ op: 'replace', path: '/foo/abc', value: { xyz: 64 } }]
-  },
-  {
-    name: 'add element to end',
-    doc: { foo: ['bar', 'baz'] },
-    patches: [{ op: 'add', path: '/foo/-', value: 'qux' }],
-    expected: [{ op: 'add', path: '/foo/-', value: 'qux' }]
   }
+  // // Uncomment the below code block
+  // ,
+  // {
+  //   name: 'add element to end',
+  //   doc: { foo: ['bar', 'baz'] },
+  //   patches: [
+  //     { op: 'add', path: '/foo/-', value: 'qux' },
+  //     { op: 'add', path: '/foo/-', value: 'qux2' },
+  //     { op: 'copy', from: '/foo/1', path: '/newKey' }
+  //   ],
+  //   expected: [
+  //     { op: 'add', path: '/foo/-', value: 'qux' },
+  //     { op: 'add', path: '/foo/-', value: 'qux2' },
+  //     { op: 'copy', from: '/foo/1', path: '/newKey' }
+  //   ]
+  // }
 ];
 
 cases.forEach(({ name, doc = {}, patches, expected }) => {
