@@ -62,6 +62,8 @@ For example:
 ];
 ```
 
+The output is correct in most scenarios, but by overwriting all the elements in the key we might sometimes loose data if the state on the server & client is out of sync.
+
 ## 🧪 Tests
 
 Tests are available at [src/optimize.test.js](./src/optimize.test.js).
@@ -71,3 +73,6 @@ You can run them using
 ```bash
 npm test
 ```
+
+I've also added a test case where we can see the [known-issues](#-known-issues) in action.
+To do that, go to [src/optimize.test.js#L49](./src/optimize.test.js#L49), un-comment the last test case & re-run tests.
