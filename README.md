@@ -1,6 +1,6 @@
 ## JSON Patch optimize
 
-JSON Patch optimize is a sample implementation of what it'd look like to have a function that takes JSON Patches & reduces it to it's smallest form.
+JSON Patch optimize is a sample implementation of what it'd look like to have a function that takes JSON Patches & reduces it to its smallest form.
 
 A few examples:
 
@@ -62,7 +62,7 @@ For example:
 ];
 ```
 
-The output is correct in most scenarios, but by overwriting all the elements in the key we might sometimes loose data if the state on the server & client is out of sync.
+The output is correct in most scenarios, but by overwriting all the elements in the array we might sometimes lose data if the state on the server & client is out of sync.
 
 ## 🧪 Tests
 
