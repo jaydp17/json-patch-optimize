@@ -61,3 +61,13 @@ For example:
   { op: 'copy', from: '/foo/1', path: '/newKey' }
 ];
 ```
+
+## 🧪 Tests
+
+Tests are available at [src/optimize.test.js](./src/optimize.test.js).
+
+You can run them using
+
+```bash
+npm test
+```
